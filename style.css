@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: 'Lato', sans-serif;
+}
+
+.stripes {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+    display: grid;
+  	grid: repeat(5, 200px) / repeat(3, 1fr);
+}
+
+.stripes .language-link {
+    margin: 10px;
+    height: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    grid-column: 3;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.stripes span {
+ 	transform: skewY(-12deg);
+    transform-origin: 0;
+}
+
+.stripes :nth-child(2) {
+    width: 100%;
+    background: #4c29ff;
+    grid-row: 1;
+}
+
+.stripes :nth-child(3) {
+    width: 150%;
+    background: #4553ff;
+    grid-row: 2;
+}
+
+.stripes :nth-child(4) {
+    width: 180%;
+    background: #4f40ff;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.stripes :nth-child(5) {
+    width: 180%;
+    background: #25ddf5;
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.stripes :nth-child(6) {
+    width: 100%;
+    background: #25ddf5;
+    grid-row: 5;
+    grid-column: 3;
+}
+
+.stripes :nth-child(7) {
+    width: 90%;
+    height: 70%;
+    background: #05d5ff;
+    grid-row: 5;
+    grid-column: 2;
+}
+
+.container {
+	width: 100%;
+    height: 100%;
+	position: relative;
+	top: -100vh;
+	left: 0;
+	display: grid; 
+	grid-template-columns: 700px 400px 700px ;
+}
+
+.container .initials {
+	grid-column: 1;
+	z-index: 2;
+	margin: auto;
+    cursor: default;
+}
+
+.container .initials h1 {
+	font-size: 400px;
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(255, 255, 255, .8);
+}
+
+.container .initials h1 :first-child {
+	position: relative;
+	left: 60px;
+}
+
+.container .points {
+	grid-column: 2;
+	width: 500px;
+	padding-left: 50px;
+	margin: auto 25px;
+	overflow: hidden; 
+}
+
+.container .points div {
+	background: rgba(255, 255, 255, .8);
+	transform: skewX(22deg);
+    transform-origin: 0;
+    margin: 10px;
+    width: 300px;
+    position: relative;
+    left: -80px;
+    z-index: 1;
+    transition: .5s;
+}
+
+.container .points div p {
+    transform: skewX(-22deg);
+   	padding: 10px 0 10px 30px;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6em;
+    height: 100%;
+    background: linear-gradient(150deg,#53f 5%,#05d5ff 55%,#a6ffcb 94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .points div:hover {
+	background: rgba(255, 255, 255, .3);
+    width: 350px;
+    cursor: pointer;
+}
+
+.container .points div p:hover {
+    -webkit-text-fill-color: #fff;
+}
+
+.container .descriptions {
+	padding: 30px;
+	grid-column: 3;
+	margin: auto 0;
+}
+
+.container .descriptions div {
+    font-weight: bold;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px;
+    line-height: 1.6em;
+}
+
+.container .descriptions .about {
+    display: none;
+    margin-left: 400px;
+} 
+
+.container .descriptions .about p span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.container .descriptions .education {
+    display: none;
+    margin-left: 400px;
+}
+
+.container .descriptions .education .container-education {
+    display: grid;
+    grid-template-columns: 350px 400px;
+}
+
+.container .descriptions .education .container-education div {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.container .descriptions .education .container-education .date {
+    grid-column: 1;
+    width: ;
+}
+
+.container .descriptions .education .container-education .date p span {
+    position: relative;
+    padding-right: 60px;
+}
+
+.container .descriptions .education .container-education .date p span:last-child {
+    position: relative;
+    top: 30px;
+}
+
+.container .descriptions .education .container-education .date p span:first-child:after {
+    content:" ";
+    position: absolute;
+    top: -20%;
+    left: 80%;
+    width: 5px;
+    height: 60px;
+    transform: skewX(-45deg);
+    background-color: #fff;
+    display: inline-block;
+}
+
+.container .descriptions .education .container-education .school {
+    grid-column: 2;
+}
+
+.container .descriptions .education .container-education .school p:first-child {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container .descriptions .skills {
+    display: none;
+    margin-left: 400px;
+}
+
+.container .descriptions .skills .container-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-around;
+}
+
+.container .descriptions .skills .container-skills div {
+    height: 50px;
+    width: 250px;
+    overflow: hidden;
+    -webkit-transition: transform .25s;
+    transition: transform .25s;
+}
+
+.container .descriptions .skills .container-skills div h3 i {
+    padding: 5px;
+}
+
+.container .descriptions .skills .container-skills div p {
+    margin: 5px;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+}
+
+.container .descriptions .skills .container-skills div:hover {
+    height: 150px;
+    border: 1px solid #fff;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.container .descriptions .skills .container-skills div:hover h3 {
+    border-bottom: 3px solid #fff;
+}
+
+.container .descriptions .skills .container-skills div:hover p {
+    opacity: 1;
+    font-size: 90%;
+}
+
+.container .descriptions .projects {
+    display: none;
+    margin-left: 400px;
+}
+
+.container .descriptions .contact {
+    display: none;
+    margin-left: 400px;
+}
+
+.container .descriptions .contact i {
+    margin: 15px;
+}
+
+.container .descriptions .contact a {
+    text-decoration: none;
+    color: #fff;
+}
+
