@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
-body {
-	height: 100vh;
-	width: 100vw;
+
+html, body {
+	height: 100%;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -11,6 +11,7 @@ body {
     height: 100%;
     overflow: hidden;
     background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+    display: -ms-grid;
     display: grid;
   	grid: repeat(5, 200px) / repeat(3, 1fr);
 }
@@ -22,55 +23,68 @@ body {
     font-weight: bold;
     font-size: 18px;
     text-align: right;
-    grid-column: 3;
+    -ms-grid-column: 3;
+        grid-column: 3;
     text-decoration: none;
     z-index: 2;
 }
 
 .stripes span {
- 	transform: skewY(-12deg);
-    transform-origin: 0;
+ 	-webkit-transform: skewY(-12deg);
+ 	        transform: skewY(-12deg);
+    -webkit-transform-origin: 0;
+            transform-origin: 0;
 }
 
 .stripes :nth-child(2) {
     width: 100%;
     background: #4c29ff;
-    grid-row: 1;
+    -ms-grid-row: 1;
+        grid-row: 1;
 }
 
 .stripes :nth-child(3) {
     width: 150%;
     background: #4553ff;
-    grid-row: 2;
+    -ms-grid-row: 2;
+        grid-row: 2;
 }
 
 .stripes :nth-child(4) {
     width: 180%;
     background: #4f40ff;
-    grid-row: 1;
-    grid-column: 2;
+    -ms-grid-row: 1;
+        grid-row: 1;
+    -ms-grid-column: 2;
+        grid-column: 2;
 }
 
 .stripes :nth-child(5) {
     width: 180%;
     background: #25ddf5;
-    grid-row: 5;
-    grid-column: 1;
+    -ms-grid-row: 5;
+        grid-row: 5;
+    -ms-grid-column: 1;
+        grid-column: 1;
 }
 
 .stripes :nth-child(6) {
     width: 100%;
     background: #25ddf5;
-    grid-row: 5;
-    grid-column: 3;
+    -ms-grid-row: 5;
+        grid-row: 5;
+    -ms-grid-column: 3;
+        grid-column: 3;
 }
 
 .stripes :nth-child(7) {
     width: 90%;
     height: 70%;
     background: #05d5ff;
-    grid-row: 5;
-    grid-column: 2;
+    -ms-grid-row: 5;
+        grid-row: 5;
+    -ms-grid-column: 2;
+        grid-column: 2;
 }
 
 .container {
@@ -79,12 +93,16 @@ body {
 	position: relative;
 	top: -100vh;
 	left: 0;
+	display: -ms-grid;
 	display: grid; 
-	grid-template-columns: 700px 400px 700px ;
+	-ms-grid-columns: 700px 400px 700px ; 
+	    grid-template-columns: 700px 400px 700px ;
+    overflow: hidden;
 }
 
 .container .initials {
-	grid-column: 1;
+	-ms-grid-column: 1;
+	    grid-column: 1;
 	z-index: 2;
 	margin: auto;
     cursor: default;
@@ -102,7 +120,8 @@ body {
 }
 
 .container .points {
-	grid-column: 2;
+	-ms-grid-column: 2;
+	    grid-column: 2;
 	width: 500px;
 	padding-left: 50px;
 	margin: auto 25px;
@@ -111,8 +130,10 @@ body {
 
 .container .points div {
 	background: rgba(255, 255, 255, .8);
-	transform: skewX(22deg);
-    transform-origin: 0;
+	-webkit-transform: skewX(22deg);
+	        transform: skewX(22deg);
+    -webkit-transform-origin: 0;
+            transform-origin: 0;
     margin: 10px;
     width: 300px;
     position: relative;
@@ -122,7 +143,8 @@ body {
 }
 
 .container .points div p {
-    transform: skewX(-22deg);
+    -webkit-transform: skewX(-22deg);
+            transform: skewX(-22deg);
    	padding: 10px 0 10px 30px;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
@@ -145,7 +167,8 @@ body {
 
 .container .descriptions {
 	padding: 30px;
-	grid-column: 3;
+	-ms-grid-column: 3;
+	    grid-column: 3;
 	margin: auto 0;
 }
 
@@ -159,7 +182,6 @@ body {
 
 .container .descriptions .about {
     display: none;
-    /*margin-left: 400px;*/
 } 
 
 .container .descriptions .about p span {
@@ -169,12 +191,13 @@ body {
 
 .container .descriptions .education {
     display: none;
-    /*margin-left: 400px;*/
 }
 
 .container .descriptions .education .container-education {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 350px 400px;
+    -ms-grid-columns: 350px 400px;
+        grid-template-columns: 350px 400px;
 }
 
 .container .descriptions .education .container-education div {
@@ -183,7 +206,8 @@ body {
 }
 
 .container .descriptions .education .container-education .date {
-    grid-column: 1;
+    -ms-grid-column: 1;
+        grid-column: 1;
     width: ;
 }
 
@@ -204,13 +228,15 @@ body {
     left: 80%;
     width: 5px;
     height: 60px;
-    transform: skewX(-45deg);
+    -webkit-transform: skewX(-45deg);
+            transform: skewX(-45deg);
     background-color: #fff;
     display: inline-block;
 }
 
 .container .descriptions .education .container-education .school {
-    grid-column: 2;
+    -ms-grid-column: 2;
+        grid-column: 2;
 }
 
 .container .descriptions .education .container-education .school p:first-child {
@@ -219,24 +245,32 @@ body {
 
 .container .descriptions .skills {
     display: none;
-    /*margin-left: 400px;*/
 }
 
 .container .descriptions .skills .container-skills,
 .container .descriptions .projects .container-projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
 }
 
 .container .descriptions .skills .container-skills div {
     height: 50px;
     width: 250px;
     overflow: hidden;
-    -webkit-transition: transform .25s;
+    transition: -webkit-transform .25s;
     transition: transform .25s;
+    transition: transform .25s, -webkit-transform .25s;
 }
 
 .container .descriptions .skills .container-skills div h3 i {
@@ -247,7 +281,6 @@ body {
     margin: 5px;
     text-align: right;
     opacity: 0;
-    -webkit-transition: opacity .25s;
     transition: opacity .25s;
 }
 
@@ -270,7 +303,6 @@ body {
 
 .container .descriptions .projects {
     display: none;
-    /*margin-left: 400px;*/
 }
 
 .container .descriptions .projects div figure {
@@ -282,7 +314,6 @@ body {
 
 .container .descriptions .projects div figure img {
     opacity: 0.7;
-    -webkit-transition: opacity 0.45s;
     transition: opacity 0.45s;
     height: 100%;
     width: 100%;
@@ -297,9 +328,9 @@ body {
 }
 
 .container .descriptions .projects div figure h2 {
-
-    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
 }
@@ -317,8 +348,9 @@ body {
 
 .container .descriptions .projects div figure p a i {
     opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
     -webkit-transform: translate3d(0,50px,0);
     transform: translate3d(0,50px,0);
 }
@@ -339,18 +371,15 @@ body {
 }
 
 .container .descriptions .projects div figure:hover p a:nth-child(2) i {
-    -webkit-transition-delay: 0.05s;
     transition-delay: 0.05s;
 }
 
 .container .descriptions .projects div figure:hover p a:first-child i {
-    -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
 }
 
 .container .descriptions .contact {
     display: none;
-    /*margin-left: 400px;*/
 }
 
 .container .descriptions .contact i {
@@ -361,4 +390,3 @@ body {
     text-decoration: none;
     color: #fff;
 }
-
