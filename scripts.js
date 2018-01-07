@@ -17,11 +17,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphSkills.style.display="none";
   			paragraphProjects.style.display="none";
   			paragraphContact.style.display="none";
-
-        paragraphAbout.animate([
-          { transform: 'translateY(0px)' }, 
-          {transform: 'translateY(-400px)'}
-          ], 1500);
   		}
 
   		if (point === 'education') {
@@ -30,11 +25,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphSkills.style.display="none";
   			paragraphProjects.style.display="none";
   			paragraphContact.style.display="none";
-        
-        paragraphEducation.animate([
-          { transform: 'translateY(0px)' }, 
-          {transform: 'translateY(-400px)'}
-          ], 1500);
   		}
 
   		if (point === 'skills') {
@@ -43,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphSkills.style.display="initial";
   			paragraphProjects.style.display="none";
   			paragraphContact.style.display="none";
-        
-        paragraphSkills.animate({transform: 'translateY(-400px)'}, 1500);
   		}
 
   		if (point === 'projects') {
@@ -53,11 +41,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphSkills.style.display="none";
   			paragraphProjects.style.display="initial";
   			paragraphContact.style.display="none";
-        
-        paragraphProjects.animate([
-          { transform: 'translateY(0px)' }, 
-          {transform: 'translateY(-400px)'}
-          ], 1500);
   		}
 
   		if (point === 'contact') {
@@ -66,13 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphSkills.style.display="none";
   			paragraphProjects.style.display="none";
   			paragraphContact.style.display="initial";
-        
-        paragraphContact.animate([
-          { transform: 'translateY(0px)' }, 
-          {transform: 'translateY(-400px)'}
-          ], 1500);
   		}
-
   	}
 
   	pointAbout.addEventListener("click", function() { paragraphIn('about') });
@@ -80,5 +57,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   	pointSkills.addEventListener("click", function() { paragraphIn('skills') });
   	pointProjects.addEventListener("click", function() { paragraphIn('projects') });
   	pointContact.addEventListener("click", function() { paragraphIn('contact') });
-
 });
