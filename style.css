@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 
-@media (min-width: 1200px) {
-
 .row:before,
 .row:after {
   content: " ";
@@ -14,12 +12,6 @@
 
 .row:after {
   clear: both; }
-
-[class*="col-"] {
-  min-height: 1px;
-  padding: 10px;
-  max-height: 700px;
-  overflow: hidden; }
 
 .col-1 {
   width: 8.33%; }
@@ -94,14 +86,14 @@
   margin-left: 91.66%; }
 
 body {
-    min-height: 100vh;
+	min-height: 100vh;
 	font-family: 'Lato', sans-serif;
     background: #05d5ff url('img/background.jpg') center/cover no-repeat;
 }
 
 .container {
-    min-height: 100vh;
-    margin: auto;
+	min-height: calc(100vh - 30px);
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -145,10 +137,6 @@ body {
 	color: rgba(255, 255, 255, .8);
 }
 
-.container .initials h1 span {
-    height: 115px;
-}
-
 .container .initials h1 :first-child {
 	position: relative;
 	left: 30px;
@@ -187,16 +175,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.container .points div:hover {
-	background: rgba(255, 255, 255, .3);
-    width: 300px;
-    cursor: pointer;
-}
-
-.container .points div p:hover {
-    -webkit-text-fill-color: #fff;
-}
-
 .container .descriptions {
 	padding: 30px;
 	margin: auto 0;
@@ -221,7 +199,7 @@ body {
 
 .container .descriptions .about p span {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 110%;
 }
 
 .container .descriptions .education {
@@ -305,9 +283,11 @@ body {
 .container .descriptions .skills .container-skills div {
     height: 50px;
     width: 250px;
+    padding: 20px;
     overflow: hidden;
     transition: -webkit-transform .25s;
     transition: transform .25s;
+    transition: transform .25s, -webkit-transform .25s;
 }
 
 .container .descriptions .skills .container-skills div h3 i {
@@ -320,23 +300,6 @@ body {
     line-height: 1.2em;
     opacity: 0;
     transition: opacity .25s;
-}
-
-.container .descriptions .skills .container-skills div:hover {
-    height: 150px;
-    border: 1px solid #fff;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    margin: 10px;
-}
-
-.container .descriptions .skills .container-skills div:hover h3 {
-    border-bottom: 3px solid #fff;
-}
-
-.container .descriptions .skills .container-skills div:hover p {
-    opacity: 1;
-    font-size: 90%;
 }
 
 .container .descriptions .projects {
@@ -369,6 +332,7 @@ body {
 .container .descriptions .projects div figure h2 {
     transition: -webkit-transform .35s;
     transition: transform .35s;
+    transition: transform .35s, -webkit-transform .35s;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
 }
@@ -379,17 +343,74 @@ body {
     padding-right: 15px;
 }
 
-.container .descriptions .projects div figure a:hover {
-    color: #4553ff;
-    opacity: .6;
-}
-
 .container .descriptions .projects div figure p a i {
     opacity: 0;
     transition: opacity .35s, -webkit-transform .35s;
     transition: opacity .35s, transform .35s;
+    transition: opacity .35s, transform .35s, -webkit-transform .35s;
     -webkit-transform: translate3d(0,50px,0);
     transform: translate3d(0,50px,0);
+}
+
+.container .descriptions .contact {
+    display: none;
+}
+
+.container .descriptions .contact i {
+    margin: 15px;
+}
+
+.container .descriptions .contact a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+	border-top: 1px solid #fff;
+	height: 30px;
+	opacity: .9;
+}
+
+footer p {
+	height: 100%;
+	font-size: 16px;
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+}
+
+@media (min-width: 1200px) {
+
+.container .points div:hover {
+	background: rgba(255, 255, 255, .3);
+    width: 300px;
+    cursor: pointer;
+}
+
+.container .points div p:hover {
+    -webkit-text-fill-color: #fff;
+}
+
+.container .descriptions .skills .container-skills div:hover {
+    height: 150px;
+    border: 1px solid #fff;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    margin: 10px;
+}
+
+.container .descriptions .skills .container-skills div:hover h3 {
+    border-bottom: 3px solid #fff;
+}
+
+.container .descriptions .skills .container-skills div:hover p {
+    opacity: 1;
+    font-size: 90%;
+}
+
+.container .descriptions .projects div figure a:hover {
+    color: #4553ff;
+    opacity: .6;
 }
 
 .container .descriptions .projects div figure:hover img {
@@ -414,165 +435,13 @@ body {
 .container .descriptions .projects div figure:hover p a:first-child i {
     transition-delay: 0.1s;
 }
-
-.container .descriptions .contact {
-    display: none;
-}
-
-.container .descriptions .contact i {
-    margin: 15px;
-}
-
-.container .descriptions .contact a {
-    text-decoration: none;
-    color: #fff;
-}
 }
 
 @media (max-width: 1199px) {
 
-[class*="col-"] {
-    width: 100%;
-    padding: 12px;
-    float: left;
-}
-
-body {
-    min-height: 100vh;
-    font-family: 'Lato', sans-serif;
-    background: #05d5ff url('img/background.jpg') 0/cover no-repeat;
-}
-
-.container {
-    min-height: 100vh;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-}
-
-.container .language-link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    height: 20px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: right;
-    text-decoration: none;
-}
-
-.container .initials {
-    cursor: default;
-    text-align: center;
-}
-
-.container .initials h1 {
-    font-size: 80px;
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(255, 255, 255, .8);
-}
-
-.container .initials h1 :first-child {
-    position: relative;
-    left: 10px;
-}
-
-.container .points {
-    margin: 0;
-    overflow: hidden; 
-    display: -webkit-box; 
-    display: -ms-flexbox; 
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    text-align: center;
-}
-
-.container .points div {
-    background: rgba(255, 255, 255, .8);
-    -webkit-transform: skewX(22deg);
-            transform: skewX(22deg);
-    -webkit-transform-origin: 0;
-            transform-origin: 0;
-    margin: 3px;
-    width: 180px;
-    display: inline-block;
-}
-
-.container .points div p {
-    padding: 10px;
-    -webkit-transform: skewX(-22deg);
-            transform: skewX(-22deg);
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6em;
-    height: 100%;
-    background: linear-gradient(150deg,#53f 5%,#05d5ff 55%,#a6ffcb 94%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.container .descriptions {
-    max-width: 750px;
-    padding: 0 30px;
-    margin: 0;
-}
-
-.container .descriptions div {
-    font-weight: bold;
-    font-size: 18px;
-    color: #fff;
-    padding: 10px;
-    line-height: 1.6em;
-}
-
-.container .descriptions .about {
-    display: none;
-    width: 80%;
-} 
-
 .container .descriptions .about p {
-    padding: 10px;
-}
-
-.container .descriptions .about p span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    width: 80%;
-}
-
-.container .descriptions .education {
-    display: none;
-}
+    padding: 10px 20px;
+} 
 
 .container .descriptions .education .container-education {
     display: block;
@@ -589,67 +458,16 @@ body {
     border-top: 1px solid #fff;
 }
 
-.container .descriptions .education .container-education .date p span {
-    position: relative;
-    padding-right: 3%;
-}
-
-.container .descriptions .education .container-education .date p span:last-child {
-    position: relative;
-    top: 30px;
-}
-
-.container .descriptions .education .container-education .date p span:first-child:after {
-    content:" ";
-    position: absolute;
-    top: 0;
-    left: 90%;
-    width: 5px;
-    height: 60px;
-    -webkit-transform: skewX(-45deg);
-            transform: skewX(-45deg);
-    background-color: #fff;
-    display: inline-block;
-}
-
 .container .descriptions .education .container-education .school {
     border-bottom: 1px solid #fff;
 }
 
-.container .descriptions .education .container-education .school p:first-child {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.container .descriptions .education .container-education .school p:nth-child(3) {
-    font-size: 90%;
-}
-
-.container .descriptions .skills {
-    display: none;
-}
-
-.container .descriptions .skills .container-skills,
-.container .descriptions .projects .container-projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-}
-
 .container .descriptions .skills .container-skills div {
-    height: 150px;
-    width: 210px;
-    overflow: hidden;
+    height: 120px;
+    width: 200px;
     border: 1px solid #fff;
+    font-size: 90%;
+    padding: 5px;
     margin: 5px;
 }
 
@@ -657,59 +475,207 @@ body {
     border-bottom: 2px solid #fff;
 }
 
-.container .descriptions .skills .container-skills div h3 i {
-    padding: 5px;
-}
-
 .container .descriptions .skills .container-skills div p {
-    margin: 5px;
-    text-align: right;
-    line-height: 1.2em;
     opacity: .9;
 }
 
-.container .descriptions .projects {
-    display: none;
-}
-
 .container .descriptions .projects div figure {
-    display: inline-block;
-    height: 250px;
-    width: 200px;
+    height: 200px;
+    width: 150px;
     margin: 1.4em;
 }
 
 .container .descriptions .projects div figure img {
     opacity: .9;
-    height: 100%;
-    width: 100%;
 }
 
 .container .descriptions .projects div figure figcaption {
-    position: relative;
-    top: -40%;
-    background: #05d5ff;
-    font-size: 20px;
+	top: -50%;
+    text-align: center;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.container .descriptions .projects div figure h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.container .descriptions .projects div figure p a i {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    padding: 10px;
+}
+}
+
+@media (max-width: 1199px) and (min-width: 992px){
+
+.container .initials {
     text-align: center;
 }
 
-.container .descriptions .projects div figure a i {
-    color: #fff;
-    font-size: 150%;
-    padding: 15px;
+.container .points {
+	width: 270px;
+}
+
+.container .points div {
+    width: 230px;
+}
+
+.container .points div:hover {
+	background: rgba(255, 255, 255, .3);
+    width: 260px;
+    cursor: pointer;
+}
+
+.container .points div p:hover {
+    -webkit-text-fill-color: #fff;
+}
+
+.container .descriptions {
+	padding: 10px;
+}
+
+.container .descriptions div {
+    font-size: 20px;
+}
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+.container .initials {
+    text-align: center;
+}
+
+.container .initials h1 {
+	font-size: 800%;
+}
+
+.container .initials h1 :first-child {
+	left: 20px;
+}
+
+.container .points {
+	width: 210px;
+}
+
+.container .points div {
+    width: 170px;
+}
+
+.container .points div:hover {
+	background: rgba(255, 255, 255, .3);
+    width: 200px;
+    cursor: pointer;
+}
+
+.container .points div p {
+    font-size: 20px;
+}
+
+.container .points div p:hover {
+    -webkit-text-fill-color: #fff;
+}
+
+.container .descriptions {
+	padding: 0;
+}
+
+.container .descriptions div {
+    font-size: 18px;
+}
+}
+
+@media (max-width: 767px) {
+
+[class*="col-"] {
+    width: 100%;
+}
+
+.container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.container .language-link {
+    margin: 10px;
+}
+
+.container .initials {
+    text-align: center;
+}
+
+.container .initials h1 {
+    font-size: 500%;
+}
+
+.container .initials h1 :first-child {
+    left: 10px;
+}
+
+.container .points {
+	width: 100%;
+	padding: 0 10px;
+    margin: 10px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.container .points div {
+	position: static;
+    margin: 3px;
+    width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.container .points div p {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.container .descriptions {
+    max-width: 750px;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.container .descriptions div {
+    font-size: 18px;
 }
 
 .container .descriptions .contact {
-    display: none;
+	font-size: 95%;
     text-align: center;
-}
-
-.container .descriptions .contact i {
-    margin: 15px;
-}
-
-.container .descriptions .contact a {
-    text-decoration: none;
-    color: #fff;
 }
 }
