@@ -145,7 +145,8 @@ body {
 .container .points {
 	width: 300px;
 	padding-left: 50px;
-	margin: auto 25px;
+    padding-right: 10px;
+	margin: auto 20px;
 	overflow: hidden; 
 }
 
@@ -173,23 +174,23 @@ body {
     background: linear-gradient(150deg,#53f 5%,#05d5ff 55%,#a6ffcb 94%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: default;
 }
 
 .container .descriptions {
-	padding: 30px;
 	margin: auto 0;
+    padding: 10px;
 }
 
 .container .descriptions div {
     font-weight: bold;
     font-size: 22px;
     color: #fff;
-    padding: 10px;
     line-height: 1.6em;
+    margin: 10px;
 }
 
 .container .descriptions .about {
-    display: none;
     width: 80%;
 } 
 
@@ -281,9 +282,10 @@ body {
 }
 
 .container .descriptions .skills .container-skills div {
-    height: 50px;
-    width: 250px;
+    height: 120px;
+    width: 270px;
     padding: 20px;
+    margin: 0;
     overflow: hidden;
     transition: -webkit-transform .25s;
     transition: transform .25s;
@@ -300,6 +302,7 @@ body {
     line-height: 1.2em;
     opacity: 0;
     transition: opacity .25s;
+    font-size: 80%;
 }
 
 .container .descriptions .projects {
@@ -392,11 +395,11 @@ footer p {
 }
 
 .container .descriptions .skills .container-skills div:hover {
-    height: 150px;
+    height: 120px;
     border: 1px solid #fff;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    margin: 10px;
+    padding: 10px;
 }
 
 .container .descriptions .skills .container-skills div:hover h3 {
@@ -405,7 +408,6 @@ footer p {
 
 .container .descriptions .skills .container-skills div:hover p {
     opacity: 1;
-    font-size: 90%;
 }
 
 .container .descriptions .projects div figure a:hover {
@@ -561,12 +563,12 @@ footer p {
 }
 
 .container .points div {
-    width: 170px;
+    width: 180px;
 }
 
 .container .points div:hover {
 	background: rgba(255, 255, 255, .3);
-    width: 200px;
+    width: 210px;
     cursor: pointer;
 }
 
