@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-  	var pointAbout = document.getElementById("js-point-about"),
+  	var menu = document.querySelector('.points'),
+      pointAbout = document.getElementById("js-point-about"),
 	  	pointEducation = document.getElementById("js-point-education"),
 	  	pointSkills = document.getElementById("js-point-skills"),
 	  	pointProjects = document.getElementById("js-point-projects"),
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  	paragraphContact = document.getElementById("contact");
 
   	function paragraphIn(point) {
+
   		if (point === 'about') {
   			paragraphAbout.style.display="initial";
   			paragraphEducation.style.display="none";
@@ -19,15 +21,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphContact.style.display="none";
   		}
 
-  		if (point === 'education') {
+  		else if (point === 'education') {
   			paragraphAbout.style.display="none";
-  			paragraphEducation.style.display="initial";
-  			paragraphSkills.style.display="none";
+  			paragraphEducation.style.display="initial";  			paragraphSkills.style.display="none";
   			paragraphProjects.style.display="none";
   			paragraphContact.style.display="none";
   		}
 
-  		if (point === 'skills') {
+  		else if (point === 'skills') {
   			paragraphAbout.style.display="none";
   			paragraphEducation.style.display="none";
   			paragraphSkills.style.display="initial";
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphContact.style.display="none";
   		}
 
-  		if (point === 'projects') {
+  		else if (point === 'projects') {
   			paragraphAbout.style.display="none";
   			paragraphEducation.style.display="none";
   			paragraphSkills.style.display="none";
@@ -43,13 +44,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   			paragraphContact.style.display="none";
   		}
 
-  		if (point === 'contact') {
+  		else {
   			paragraphAbout.style.display="none";
   			paragraphEducation.style.display="none";
   			paragraphSkills.style.display="none";
   			paragraphProjects.style.display="none";
   			paragraphContact.style.display="initial";
-  		}
+        }
   	}
 
   	pointAbout.addEventListener("click", function() { paragraphIn('about') });
